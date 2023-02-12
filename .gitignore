@@ -1,6 +1,7 @@
 .idea/
 .venv/
-_pycache_/
+__pycache__/
 checkpoint/
 data_eli5/
 wiki40b_snippets/
+bart_eli5_task_1_draft.pth

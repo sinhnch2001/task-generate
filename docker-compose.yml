@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  db:
+    image: oelmekki/pg350d:9.6
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=12345 
+      - POSTGRES_DB=postgres
+    ports:
+      - '5432:5432'
+      
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8890:8080
+    depends_on:
+      - db
